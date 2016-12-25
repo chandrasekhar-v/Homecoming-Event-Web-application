@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <style type="text/css">
+            .button {
+                background-color: #006747;
+                border: none;
+                color: white;
+
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 18px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            .button1 {border: 5px solid #006747;
+            }
+            .p {
+                font-family: "Times New Roman";
+
+            }
+            .width {
+                width:350px;
+                height:27px;
+            }
+        </style>
+        <script>
+            $(function () {
+                $("#x").load("deep-minified.html");
+            });
+        </script>
+        <script type="text/javascript">
+            function myFunc() {
+                alert("adfad");
+                var okay = false;
+
+                alert(document.getElementsByName("arts").length);
+                var checkboxs = document.getElementsByName("arts");
+                var artsNames = "";
+                for (i = 0; i < checkboxs.length; i++)
+                {
+                    alert("In forloop");
+                    //artsNames+= checkboxs;
+                    //alert("fasdfasdf"+artsNames);
+                    if (checkboxs[i].checked)
+                    {
+                        artsNames = artsNames + " " + checkboxs[i].value;
+                        alert("harsh" + checkboxs[i].value);
+                        okay = true;
+
+                    }
+                }
+                if (okay) {
+                    var value = window.confirm("Are you Sure You want to register for" + artsNames);
+                    if (value) {
+                        var myform = document.getElementById("form");
+                        myform.submit();
+                    } else {
+                    }
+                    return okay;
+                } else {
+                    alert("Please select atleast one Art to register");
+                }
+
+
+            }
+        </script>
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <div class="container">
+            <img src="logo.png" class = "img-rounded" width="100%" height="120">
+            <br>
+            <div class="col-md-12" width="300%" align="right">                        
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                </form>
+            </div>
+            <div>
+             <div class="col-md-8" width="300%" align="right">  
+                 <img src="img/02.jpg" class = "img-rounded" width="100%" height="60%">
+             </div>
+           
+              <div class="col-md-4" style="background-color: #006747" > 
+                  <form action="participantServlet">
+                  <div style="padding-left: 35%;color: white;font-family: 'Times New Roman'"><h1>Log In</h1></div>
+                  <br>
+                  <div class="row">
+                  <div  class="col-md-6"  style="padding-left: 5%;color: white;float: left;text-align: right;font-family: 'Times New Roman'">
+                      <h3>Email</h3>
+                    </div>
+                      <div class="col-sm-6" style="padding-top: 5%">
+                           <input type="text" id="email" name="email" placeholder="Email" class="form-control" autofocus style="float: right">
+                            </div>
+                      </div>
+                  <div class="row">
+                  <div  class="col-md-6"style="padding-left: 5%;color: white;float: left;text-align: right;font-family: 'Times New Roman'">
+                      <h3>Password</h3>
+                    </div>
+                      <div class="col-sm-6" style="padding-top: 5%">
+                           <input type="text" id="email" name="email" placeholder="Email" class="form-control" autofocus style="float: right">
+                            </div>
+                      </div>
+                  <br>
+                  <div class="col-md-6" width="300%" align="right">                        
+                      <button type="button" class="default" ><font face="Times New Roman" size="4px"><b>Reset</b></font></button>
+                    </div>
+                    <div class="col-md-6" width="300%" style="background-color: #006747;">
+                        <button type="submit" class="default" value="login" name="menu"><font face="Times New Roman" size="4px" ><b>Login</b></font></button>
+                    </div>
+              </form>
+                  <br><br><br>
+                  <div align='center'><a href style='color: white'><font face="Times New Roman" size="4px"><b><u>Forgot Password?</u></b></font></a></div>
+                  <br>
+                  <div align='center'><a href style='color: white'><font face="Times New Roman" size="4px"><b><u>New Participant?</u></b></font></a></div>
+                  <br><br><br>
+                  
+                  
+                </div>
+            </div>
+            
+            <div style="padding:1% 0% 1% 10%; background-color: #006747; color:white; margin:41% 35% 0% 1%;"><b style="font-family: 'Times New Roman';font-size: 200%">Events</b></div>
+              <div style="border:1px solid #ccccff;margin:0% 35% 0% 1%;">         
+                  <br>
+                  <font face="Times New Roman" size="5%"> The events are divided into three categories game,arts and culturals. Participant is required to sign up 
+                  in order to register for the events. The following are the list of events:</font>
+                  <br>
+                  <font face="Times New Roman" size="5%"><b>Games: Badminton,Chess<br>Arts: Painting,Decoration<br>Culturals: Dancing,Signing</b></font> 
+                  
+        </div>
+                 <div style="padding:1% 0% 1% 10%; background-color: #006747; color:white; margin:-25% 0% 0% 67%; "><b style="font-family: 'Times New Roman';font-size: 200%">Important Dates</b></div>
+              <div style="border:1px solid #ccccff;margin:0% 0% -10% 67%;">         
+                  <br>
+                  <div class='row'>
+                      <div class='col-md-6' style="padding-left: 10%">
+                          <b style="font-family: 'Times New Roman';font-size: 150%">Registration Opens</b>
+                      </div>
+                      <div class='col-md-6'>
+                          <b style="font-family: 'Times New Roman';font-size: 150%">22, September</b>
+                      </div>
+                  </div>
+                  <div class='row'>
+                      <div class='col-md-6' style="padding-left: 10%">
+                          <b style="font-family: 'Times New Roman';font-size: 150%">Deadline for registration</b>
+                      </div>
+                      <div class='col-md-6'>
+                          <b style="font-family: 'Times New Roman';font-size: 150%">02, October</b>
+                      </div>
+                  </div>
+                  <div class='row'>
+                      <div class='col-md-6' style="padding-left: 10%">
+                          <b style="font-family: 'Times New Roman';font-size: 150%">Events Starts</b>
+                      </div>
+                      <div class='col-md-6'>
+                          <b style="font-family: 'Times New Roman';font-size: 150%">22, October</b>
+                      </div>
+                      <br><br>
+                      <div align='center'><a href style='color: blue;font-size: 150%'>Click here to view complete schedule</a></div>
+                  </div>
+        </div>
+                 <br><br><br><br><br><br>
+             <div class="row" align="center">
+                 <form action="participantServlet">
+                <div class="col-md-4" width="300%" style="background-color: #006747;font-size: 150">
+                    <button type="submit" class="button" value="aboutus" name="footer"><font face="Times New Roman" size="4px" ><b>About Us</b></font></button>
+                </div>
+                <div class="col-md-4" width="100%" style="background-color: #006747">
+                    <button type="submit" class="button" value="contactus" name="footer"><font face="Times New Roman" size="4px"  ><b>Contact Us</b></font></button>
+                </div>
+                <div class="col-md-4" width="100%" style="background-color: #006747">
+                    <button type="submit" class="button" value="faq" name="footer"><font face="Times New Roman" size="4px" ><b>FAQ's</b></font></button>
+                </div>
+            </form>
+        </div>
+            <br>
+        </div>
+                 
+    </body>
+</html>

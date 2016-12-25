@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Bootsrtap For Beginners</title>
+        <meta name="description" content="Hello World">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        
+
+    </head>
+
+    <body>
+
+        <header>
+
+        </header>
+        
+        <div class="container">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-1">Notify</button>
+            <div class="modal fade" id="modal-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" style="color:black">&times;</button>
+                            <h3 class="modal-title" style="align-content:center;background:#006747;color:white;font-family:Times New Roman">Notify</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p><label><strong>Chandrasekhar V</strong><br>
+                                    <p><label>Subject<br>
+                                            <input type="text" size="48" name="subject" value=""></label></p>
+                                    <p><label>Message<strong>*</strong><br>
+                                            <textarea required name="message" cols="48" rows="8"></textarea></label></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                            <a href="" class="btn btn-default" style="background: #006747;color:white;font-family:Times New Roman" onclick="func1()">Send Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function func1(){
+            alert("Message sent successfully");
+        }
+            </script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </body>	
+</html>
